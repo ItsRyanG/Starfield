@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - site/**
+      - terraform/**
+      - .github/workflows/deploy.yml
 
 jobs:
   deploy:
