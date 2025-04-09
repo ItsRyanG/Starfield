@@ -30,10 +30,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Terraform Init
-        run: terraform init \
-          -backend-config="bucket=${{ secrets.BACKEND_BUCKET }}" \
-          -backend-config="key=${{ secrets.BACKEND_KEY }}" \
-          -backend-config="region=${{ secrets.AWS_REGION }}"
+        run: terraform init -backend-config="bucket=${{ secrets.BACKEND_BUCKET }}" -backend-config="key=${{ secrets.BACKEND_KEY }}" -backend-config="region=${{ secrets.AWS_REGION }}"
       
 
       - name: Terraform Apply
