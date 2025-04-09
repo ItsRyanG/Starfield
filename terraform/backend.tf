@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = var.backend_bucket
-    key    = var.backend_key
-    region = var.aws_region
+    bucket = "REPLACEME"  # Will be overridden in GitHub Actions
+    key    = "REPLACEME"
+    region = "REPLACEME"
   }
 }

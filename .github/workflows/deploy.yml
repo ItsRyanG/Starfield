@@ -30,7 +30,11 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init \
+          -backend-config="bucket=${{ secrets.BACKEND_BUCKET }}" \
+          -backend-config="key=${{ secrets.BACKEND_KEY }}" \
+          -backend-config="region=${{ secrets.AWS_REGION }}"
+      
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
