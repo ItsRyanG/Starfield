@@ -1,0 +1,33 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: monospace;
+  background: black;
+  color: white;
+  height: 100%;
+}
+
+#gameCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 0;
+}
+
+#legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px dashed #888;
+  border-radius: 4px;
+  line-height: 1.4;
+}
