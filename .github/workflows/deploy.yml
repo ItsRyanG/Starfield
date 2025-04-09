@@ -29,6 +29,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+      - name: Set bucket name for Terraform
+        run: echo "TF_VAR_bucket_name=${{ secrets.BUCKET_NAME }}" >> $GITHUB_ENV
+      
       - name: Terraform Init
         run: terraform init -backend-config="bucket=${{ secrets.BACKEND_BUCKET }}" -backend-config="key=${{ secrets.BACKEND_KEY }}" -backend-config="region=${{ secrets.AWS_REGION }}"
       
