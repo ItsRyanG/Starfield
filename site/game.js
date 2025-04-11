@@ -210,7 +210,7 @@ window.addEventListener("keyup", e => {
 createStars(100);
 const letterData = [
   { text: "Ryan Gillespie" },
-  { text: "Systems & DevOps Engineer" },
+  { text: "Infrastructure & DevOps Engineer" },
   { text: "" },
   { text: "Engineer by trade, hacker at heart." },
   { text: "I like clean systems and weird problems." },
